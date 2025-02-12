@@ -1,0 +1,237 @@
+:host {
+    display: block;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  :host {
+    font-family: "Work Sans", sans-serif;
+  }
+  
+  .container {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    visibility: hidden;
+    position: relative;
+    overflow: hidden;
+    padding: 0 15px;
+  }
+  
+  .container > div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20vh;
+  }
+  
+  .container div.six {
+    top: 10vh;
+    z-index: 1;
+  }
+  
+  .container div.seven,
+  .container div.eight {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .one {
+    font-size: clamp(2rem, 4.5vw, 4.5rem);
+  }
+  
+  .one > img {
+    vertical-align: middle;
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .two {
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    font-weight: lighter;
+  }
+  
+  .three {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+  }
+  
+  .four .text-box {
+    width: min(90%, 500px);
+    margin: 0 auto;
+    border: 3px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .four .text-box p {
+    margin: 0;
+    text-align: left;
+  }
+  
+  .four .text-box span {
+    visibility: hidden;
+  }
+  
+  .four .text-box .fake-btn {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    color: #fff;
+    background-color: rgb(21, 161, 237);
+    padding: 5px 8px;
+    border-radius: 3px;
+  }
+  
+  .five p {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  
+  .five .idea-5 {
+    font-size: clamp(2rem, 4vw, 4rem);
+  }
+  
+  .idea-3 strong {
+    padding: 3px 5px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  
+  .idea-5 span,
+  .idea-6 span,
+  .wish-hbd span {
+    display: inline-block;
+  }
+  
+  .idea-6 span {
+    font-size: clamp(5rem, 15vw, 15rem);
+  }
+  
+  .six {
+    position: relative;
+  }
+  
+  .six img {
+    display: inline-block;
+    max-width: min(45%, 300px);
+    height: auto;
+  }
+  
+  .baloons img {
+    display: inline-block;
+    position: absolute;
+    max-width: min(200px, 25vw);
+  }
+  
+  .baloons img:nth-child(even) {
+    left: 10%;
+  }
+  
+  .baloons img:nth-child(odd) {
+    right: 10%;
+  }
+  
+  .baloons img:nth-child(3n + 0) {
+    left: 30%;
+  }
+  
+  .eight svg {
+    width: clamp(15px, 4vw, 25px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+  
+  /* SVG positioning */
+  .eight svg:nth-child(1) { top: 7vh; left: 5vw; fill: #bd6ecf; }
+  .eight svg:nth-child(2) { top: 23vh; left: 35vw; fill: #7dd175; }
+  .eight svg:nth-child(3) { top: 33vh; left: 23vw; fill: #349d8b; }
+  .eight svg:nth-child(4) { top: 43vh; left: 57vw; fill: #347a9d; }
+  .eight svg:nth-child(5) { top: 68vh; left: 7vw; fill: #c66053; }
+  .eight svg:nth-child(6) { top: 42vh; left: 77vw; fill: #bfaa40; }
+  .eight svg:nth-child(7) { top: 68vh; left: 83vw; fill: #e3bae8; }
+  .eight svg:nth-child(8) { top: 86vh; left: 37vw; fill: #8762cb; }
+  .eight svg:nth-child(9) { top: 94vh; left: 87vw; fill: #9a90da; }
+  
+  .wish-hbd {
+    font-size: clamp(2rem, 3vw, 3em);
+    margin: 0;
+  }
+  
+  .wish h5 {
+    font-weight: lighter;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    margin: 10px 0 0;
+  }
+  
+  .nine p {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-weight: lighter;
+  }
+  
+  #replay {
+    z-index: 3;
+    cursor: pointer;
+  }
+  
+  /* Mobile-specific adjustments */
+  @media screen and (max-width: 768px) {
+    .container > div {
+      top: 15vh;
+    }
+    
+    .container div.six {
+      top: 8vh;
+    }
+    
+    .four .text-box {
+      padding: 8px;
+    }
+    
+    .four .text-box .fake-btn {
+      position: relative;
+      display: inline-block;
+      margin-top: 15px;
+      right: auto;
+      bottom: auto;
+    }
+    
+    .baloons img {
+      max-width: 20vw;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .container {
+      padding: 0 10px;
+    }
+    
+    .idea-5 span {
+      display: block;
+      margin: 5px 0;
+    }
+    
+    .six img.girl-dp {
+      max-width: 60%;
+    }
+    
+    .baloons img {
+      max-width: 15vw;
+    }
+  }
+  .hbd-chatbox{
+    font-size: 15px;
+  }
