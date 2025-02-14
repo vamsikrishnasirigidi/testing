@@ -19,7 +19,7 @@ export class AppComponent {
     name: "Niha...",
     greetingText: "I really like your name btw!",
     wishText: "Aankhon me teri Ajab si Ajab si aadae hai, Dil ko bna de malang ye teri wo hawayeinn hai",
-    imagePath: "assets/img/b-image.jpg"
+    imagePath: "assets/img/c-image.jpg"
   };
 
   private tl: gsap.core.Timeline;
