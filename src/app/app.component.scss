@@ -189,6 +189,9 @@
   
   /* Mobile-specific adjustments */
   @media screen and (max-width: 768px) {
+    .idea-3 strong {
+     margin-top: 10px;
+    }
     .container > div {
       top: 15vh;
     }
@@ -199,12 +202,15 @@
     
     .four .text-box {
       padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     
     .four .text-box .fake-btn {
       position: relative;
       display: inline-block;
-      margin-top: 15px;
+      // margin-top: 15px;
       right: auto;
       bottom: auto;
     }
@@ -233,5 +239,5 @@
     }
   }
   .hbd-chatbox{
-    font-size: 15px;
+    font-size: 12px;
   }

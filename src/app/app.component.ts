@@ -18,7 +18,7 @@ export class AppComponent {
   customData: CustomData = {
     name: "Niha...",
     greetingText: "I really like your name btw!",
-    wishText: "Aankhon me teri Ajab si Ajab si aadae hai, Dil ko bna de malang ye teri wo hawayeinn hai",
+    wishText: "Falling in love with you was the best thing that ever happened to me...",
     imagePath: "assets/img/c-image.jpg"
   };
 
