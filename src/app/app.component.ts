@@ -8,12 +8,13 @@ interface CustomData {
   imagePath: string;
   wishText: string;
 }
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Test';
   customData: CustomData = {
     name: "Niha...",
@@ -23,13 +24,18 @@ export class AppComponent {
   };
 
   private tl: gsap.core.Timeline;
+  isLoading: boolean = true;
 
   constructor(private elementRef: ElementRef) {
     this.tl = gsap.timeline();
   }
 
   ngOnInit() {
-    this.initializeAnimation();
+    // Add initial loading delay
+    setTimeout(() => {
+      this.isLoading = false;
+      this.initializeAnimation();
+    }, 3500); // 3.5 seconds initial loading delay
   }
 
   private initializeAnimation(): void {
@@ -72,10 +78,10 @@ export class AppComponent {
       .to('.three', { duration: 0.7, opacity: 0, y: 10 }, '+=2')
       .from('.four', { duration: 0.7, scale: 0.2, opacity: 0 })
       .from('.fake-btn', { duration: 0.3, scale: 0.2, opacity: 0 })
-      .to('.hbd-chatbox span', { 
-        duration: 0.5, 
+      .to('.hbd-chatbox span', {
+        duration: 0.5,
         visibility: 'visible',
-        stagger: 0.05 
+        stagger: 0.05
       })
       .to('.fake-btn', { duration: 0.1, backgroundColor: 'rgb(127, 206, 248)' })
       .to('.four', { duration: 0.5, scale: 0.2, opacity: 0, y: -150 }, '+=0.7')
@@ -195,7 +201,7 @@ export class AppComponent {
         opacity: 0,
         y: 30,
         zIndex: -1
-      })
+      }, '+=30') // Add 30 seconds delay before hiding the picture
       .from('.nine p', {
         duration: 1,
         opacity: 0,
